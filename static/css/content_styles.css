@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/bg_3_lite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  nav {
+    background-color: rgba(51, 51, 51, 0.8);
+    overflow: hidden;
+  }
+  
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .logo {
+    float: left;
+  }
+  
+  .center-text {
+    text-align: center;
+    margin: 3% auto; /* Adjust the vertical position as needed */
+    padding: 20px;
+     /* Background color with transparency */
+  }
+  
+  .center-text h1 {
+    margin: 0;
+    font-size: 3.0em;
+  }
+  
+  .collab_heading{
+    padding: 1%;
+    padding-left: 2%;
+  }
+
+
+
+
+  .search-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 500px;
+}
+
+
+
+.search-button {
+    padding: 10px;
+    background-color: rgba(0, 166, 255, 0.512);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+.book-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10%;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 2%;
+  margin-left: 3%;
+  padding: 10px;
+  width: 120px;
+  opacity: 0.8; /* Set the desired opacity (0.0 to 1.0) */
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.book-card:hover {
+  opacity: 1.0; /* Set the opacity for the hover state */
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    nav a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  
+    .logo {
+      float: none;
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/content_styles.css') }}">
+  <title>Book Recommendation</title>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="/">Book Recommender</a>
+    </div>
+    <a href="/popularity/">Popularity</a>
+    <a href="/content/">Content</a>
+    <a href="/collaborative/">Collaborative</a>
+  </nav>
+
+  <div class = "collab_heading">
+    <h1>
+        Content Based Recommendation
+    </h1>
+  </div>
+
+  <form class="search-container" action="/content_recommend" method="post">
+    <input type="text" name="content_b_name" class="search-input" placeholder="Search...">
+    <input type="submit" class="search-button">
+  </form>
+
+  {%if title %}
+  <div class="book-container">
+    {% for i in range(5) %}
+        <div class="book-card">
+            <img class="book-image" src="{{image[i]}}" alt="Book Cover">
+            <div class="book-details">
+              <h2>{{ title[i]|truncate(20) }}</h2>
+              <p>Author: {{author[i]|truncate(20)}}</p>
+              <p>Genre: {{genre[i]|truncate(20)}}</p>
+            </div>
+        </div>
+    {% endfor %}
+   </div>
+    {% else %}
+        {# No books available, do nothing (pass) #}
+    {% endif %}
+
+
+</body>
+</html>
